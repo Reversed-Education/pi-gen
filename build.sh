@@ -149,6 +149,11 @@ if [ -z "${IMG_NAME}" ]; then
 	exit 1
 fi
 
+if [ -z "${USER_PASS}" ]; then
+	echo "USER_PASS not set" 1>&2
+	exit 1
+fi
+
 export USE_QEMU="${USE_QEMU:-0}"
 export IMG_DATE="${IMG_DATE:-"$(date +%Y-%m-%d)"}"
 export IMG_FILENAME="${IMG_FILENAME:-"${IMG_DATE}-${IMG_NAME}"}"
@@ -164,7 +169,7 @@ export LOG_FILE="${WORK_DIR}/build.log"
 export HOSTNAME=${HOSTNAME:-raspberrypi}
 
 export FIRST_USER_NAME=${FIRST_USER_NAME:-pi}
-export FIRST_USER_PASS=${FIRST_USER_PASS:-raspberry}
+export FIRST_USER_PASS
 export WPA_ESSID
 export WPA_PASSWORD
 export WPA_COUNTRY
