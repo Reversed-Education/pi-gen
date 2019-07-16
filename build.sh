@@ -149,8 +149,8 @@ if [ -z "${IMG_NAME}" ]; then
 	exit 1
 fi
 
-if [ -z "${USER_PASS}" ]; then
-	echo "USER_PASS not set" 1>&2
+if [ -z "${FIRST_USER_PASS}" ]; then
+	echo "FIRST_USER_PASS not set" 1>&2
 	exit 1
 fi
 
@@ -183,6 +183,9 @@ export KEYBOARD_LAYOUT="${KEYBOARD_LAYOUT:-English (UK)}"
 export TIMEZONE_DEFAULT="${TIMEZONE_DEFAULT:-Europe/London}"
 
 export GIT_HASH=${GIT_HASH:-"$(git rev-parse HEAD)"}
+
+export SSID=${SSID:-Reversed_01}
+export WPA_PASSPHRASE=${WPA_PASSPHRASE:-LassMichRein}
 
 export BASE_DIR
 
