@@ -28,9 +28,3 @@ on_chroot <<EOF
 systemctl unmask hostapd
 systemctl enable hostapd
 EOF
-
-on_chroot apt-key add - < files/reversed-ppa.gpg.key
-install -v -m 655 files/reversed.list	"${ROOTFS_DIR}/etc/apt/sources.list.d/"
-on_chroot << EOF
-apt update
-EOF
