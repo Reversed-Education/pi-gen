@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-sed -i "s/rootwait/& modules-load=dwc2,g_ether/" "${ROOTFS_DIR}/boot/cmdline.txt"
+#sed -i "s/rootwait/& modules-load=dwc2,g_ether/" "${ROOTFS_DIR}/boot/cmdline.txt"
 
 echo "
 interface wlan0

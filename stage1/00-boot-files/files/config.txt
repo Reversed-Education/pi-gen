@@ -62,4 +62,10 @@ dtoverlay=vc4-fkms-v3d
 max_framebuffers=2
 
 [all]
+# enable network over usb
 dtoverlay=dwc2
+# map pl011 UART on pins 14 and 15
+dtoverlay=pi3-miniuart-bt
+
+# Enable UART
+enable_uart=1
