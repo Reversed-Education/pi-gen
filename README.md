@@ -1,6 +1,14 @@
-# pi-gen
+# Reversed pi-gen
 
-_Tool used to create the raspberrypi.org Raspbian images_
+This is a fork of the original pi-gen from RPi-Distro. It is used to create SD card images that have the reversed companion package pre-installed and all dependencies configured.
+
+Major differences:
+
+* ssh enabled by default
+* UART enabled to interface a micro controller
+* USB OTG enabled to share a internet connection over USB
+* Ad-hoc wifi network spawning
+* reversed-companion package installed
 
 
 ## Dependencies
