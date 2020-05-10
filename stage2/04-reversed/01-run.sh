@@ -26,9 +26,9 @@ wpa_passphrase=${WPA_PASSPHRASE}
 
 echo "DAEMON_CONF=\"/etc/hostapd/hostapd.conf\"" >> "${ROOTFS_DIR}/etc/default/hostapd"
 
-echo "192.168.4.1 reversed.lan" >> "${ROOTFS_DIR}/etc/hosts"
+echo "192.168.4.1	reversed.lan" >> "${ROOTFS_DIR}/etc/hosts"
 
-on_chroot <<EOF
+on_chroot << EOF
 systemctl unmask hostapd
 systemctl enable hostapd
 EOF
