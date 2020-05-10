@@ -2,6 +2,10 @@
 
 #sed -i "s/rootwait/& modules-load=dwc2,g_ether/" "${ROOTFS_DIR}/boot/cmdline.txt"
 
+on_chroot << EOF
+systemctl disable hciuart
+EOF
+
 echo "
 interface wlan0
     static ip_address=192.168.4.1/24
